@@ -16,6 +16,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 380px;
+    /* width: 25%; */
     border-radius: 10px;
     border: 2px solid #C4C4C4;
     overflow: hidden;
@@ -32,23 +33,27 @@ h1 {
     font-size: 24px;
     font-weight: 800;
 }
-.sorted{
+
+.sorted {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
+
 .additional {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
+
 .additional input {
     padding: 5px 3px;
     border-radius: 6px;
     margin-left: 5px;
     border: 1px solid gray;
 }
+
 .remove-text {
     border-radius: 50%;
     padding: 6px 8px;
@@ -123,9 +128,11 @@ ul .list {
     justify-content: space-between;
     align-items: center;
 }
-ul .list div:first-child{
+
+ul .list div:first-child {
     word-break: break-word;
 }
+
 ul {
     width: 298px;
     display: none;
@@ -138,10 +145,12 @@ ul {
     border-radius: 5px;
     overflow: hidden;
 }
-.todosNum{
+
+.todosNum {
     display: flex;
     gap: 5px;
 }
+
 .xmark {
     display: flex;
     justify-content: center;
@@ -176,4 +185,16 @@ ul {
 
 .sortIcons i:last-child {
     display: none;
+}
+
+@media (max-width: 400px) {
+    .box {
+        width: 340px;
+    }
+}
+
+@media (max-width: 350px) {
+    .box {
+        width: 320px;
+    }
 }
