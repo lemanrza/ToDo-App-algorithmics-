@@ -32,18 +32,23 @@ h1 {
     font-size: 24px;
     font-weight: 800;
 }
-
-.sorted {
-    text-align: end;
-    padding-right: 5px;
-    color: gray;
-    transition: .2s;
+.sorted{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
-
-.sorted:hover {
-    color: black;
+.additional {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
-
+.additional input {
+    padding: 5px 3px;
+    border-radius: 6px;
+    margin-left: 5px;
+    border: 1px solid gray;
+}
 .remove-text {
     border-radius: 50%;
     padding: 6px 8px;
@@ -66,27 +71,28 @@ h1 {
 .ending {
     background-color: #833AE0;
     border-radius: 20px;
-    padding: 8px;
-    width: 140px;
+    width: 150px;
     color: white;
     overflow: hidden;
     margin: 20px auto;
     cursor: pointer;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
 }
 
-span {
-    padding: 10px 15px;
+.plus {
+    padding: 8px 15px;
     text-align: center;
     font-size: 20px;
-    margin-left: -10px;
     border-radius: 50%;
     background-color: #9953F1;
     transition: .2s;
 }
 
 
-input,
+.todo,
 button {
     border: none;
     outline: none;
@@ -97,7 +103,7 @@ button {
     flex-direction: column;
     width: 320px;
     margin: 0 auto;
-    gap: 12px;
+    gap: 10px;
 }
 
 .addToDo {
@@ -113,31 +119,35 @@ button {
 
 ul .list {
     list-style: none;
-    padding-left: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-
-.info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+ul .list div:first-child{
+    word-break: break-word;
 }
-
 ul {
     width: 298px;
     display: none;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
     margin-top: 20px;
     padding: 10px;
     margin: 0 auto;
     border: 1px solid #c3c3c3;
     border-radius: 5px;
+    overflow: hidden;
 }
-
+.todosNum{
+    display: flex;
+    gap: 5px;
+}
 .xmark {
-    padding: 4px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px;
+    padding: 5px 8px;
     margin-right: 18px;
     border-radius: 50%;
     border: 1px solid #c3c3c3;
@@ -149,4 +159,21 @@ ul {
 .xmark:hover {
     background-color: #9953F1;
     color: white;
+}
+
+.sortIcons {
+    margin: 0 0 5px 0;
+    text-align: end;
+    padding-right: 5px;
+    color: gray;
+    transition: .2s;
+}
+
+.sortIcons:hover {
+    color: black;
+
+}
+
+.sortIcons i:last-child {
+    display: none;
 }
